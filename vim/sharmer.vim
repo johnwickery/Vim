@@ -89,7 +89,9 @@ set shiftwidth=4
 "set expandtab
 
 " Character Encoding
-set encoding=utf-8
+set encoding=chinese
+" Set encoding to utf-8 will cause menu Garbled
+"set encoding=utf-8
 "set langmenu=zh_CN.UTF-8
 "language message zh_CN.UTF-8
 set fileencodings=ucs-bom,utf-8,cp936,gb18030,big5,euc-jp,euc-kr,latin1
