@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>if(!OPNET_ARXS){var OPNET_ARXS={startJS:Number(new Date()),clientId:'692BC78ED005E7BB',appId:156190,collector:'eue.collect-opnet.com',sv:'0301',DNT:true};(function(){var w=window,l=w.addEventListener,m=w.attachEvent,d=document,s='script',t='load',o=OPNET_ARXS,p=('onpagehide'in w),e=p?'pageshow':t,j=d.createElement(s),x=d.getElementsByTagName(s)[0],h=function(y){o.ldJS=new Date();o.per=y?y.persisted:null;},i=function(){o.ld=1;};o.cookie=d.cookie;d.cookie='_op_aixPageId=0; path=/; expires='+(new Date(0)).toGMTString();o.cookieAfterDelete=d.cookie;j.async=1;j.src='/assets/js/opnet_browsermetrix.c.js';x.parentNode.insertBefore(j,x);if(l){l(e,h,false);if(p){l(t,i,false);}}else if(m){m('on'+e,h);if(p){m('on'+t,i);}}})();}
+  </script>
+<meta http-equiv=Content-Type content="text/html; charset=UTF-8">
+<title>Wireshark &#183; Display Filter Reference: Bluetooth L2CAP Protocol</title>
+<link rel=dns-prefetch href="//themes.googleusercontent.com"/>
+<meta name=viewport content="width=device-width, initial-scale=1.0">
+<link rel="shortcut icon" href="/assets/images/favicon.ico" type="image/x-icon">
+<link href='//fonts.googleapis.com/css?family=Open+Sans' rel=stylesheet type='text/css'>
+<link href='//fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700' rel=stylesheet type='text/css'>
+<link href="http://www.wireshark.org/assets/css/wireshark.min.css.pagespeed.ce.HGrpNmr6qo.css" rel=stylesheet media=screen>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="http://www.wireshark.org/assets/bootstrap/js/bootstrap.min.js.pagespeed.ce.k9bB2squev.js"></script>
+<!--[if lte IE 8]>
+  <link href="/assets/css/we-could-have-cured-poverty-but-instead-have-to-make-our-sites-ie-compatible.css" rel="stylesheet" media="screen">
+  <script src="/assets/js/html5shiv.js"></script>
+  <script src="/assets/js/respond.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<div class="navbar navbar-inverse navbar-static-top">
+<div class=container>
+<button class=navbar-toggle data-toggle=collapse data-target=.navbar-responsive-collapse>
+<span class=icon-bar></span>
+<span class=icon-bar></span>
+<span class=icon-bar></span>
+</button>
+<a class=navbar-brand href="/"></a>
+<div class="nav-collapse collapse navbar-responsive-collapse">
+<ul class="nav navbar-nav">
+<li class=dropdown>
+<a href="#" class=dropdown-toggle data-toggle=dropdown>Get Acquainted <b class=caret></b></a>
+<ul class=dropdown-menu>
+<li><a href="/about.html">About</a></li>
+<li><a href="/download.html">Download</a></li>
+<li><a href="https://blog.wireshark.org/">Blog</a></li>
+</ul>
+</li>
+<li class=dropdown>
+<a href="#" class=dropdown-toggle data-toggle=dropdown>Get Help <b class=caret></b></a>
+<ul class=dropdown-menu>
+<li><a href="http://ask.wireshark.org/">Ask a Question</a></li>
+<li><a href="/faq.html">FAQs</a></li>
+<li><a href="/docs/">Documentation</a></li>
+<li><a href="/lists/">Mailing Lists</a></li>
+<li><a href="/tools/">Online Tools</a></li>
+<li><a href="http://wiki.wireshark.org/">Wiki</a></li>
+<li><a href="https://bugs.wireshark.org/">Bug Tracker</a></li>
+</ul>
+</li>
+<li class=dropdown>
+<a href="#" class=dropdown-toggle data-toggle=dropdown>Develop <b class=caret></b></a>
+<ul class=dropdown-menu>
+<li><a href="/develop.html">Get Involved</a></li>
+<li><a href="/docs/wsdg_html_chunked">Developer's Guide</a></li>
+<li><a href="https://code.wireshark.org/review/gitweb?p=wireshark.git;a=tree">Browse the Code</a></li>
+<li><a href="/download/automated">Latest Builds</a></li>
+</ul>
+</li>
+</ul>
+<ul class="nav navbar-nav pull-right">
+<li><a href="http://sharkfest.wireshark.org/">Sharkfest &#8216;14</a></li>
+<li><a href="http://www.riverbed.com/">Our Sponsor</a></li>
+<li><a href="http://www.winpcap.org/">WinPcap</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class=container>
+<div class=row id=header>
+<div class="col col-lg-8" id=slogan>
+<span id=slogan-news>
+<a href="http://sharkfest.wireshark.org/">We're having a conference! You're invited!</a>
+</span>
+</div>
+<div class="col col-lg-4">
+<form class="navbar-search pull-right" action="http://www.google.com/cse" id=cse-search-box>
+<input type=text class=search-query name=q>
+<input type=hidden name=cx value=partner-pub-8797272874272241:rr0bun-xdwz />
+<input type=hidden name=ie value=UTF-8 />
+</form>
+</div>
+</div>
+<div id=content>
+<div class=row>
+<div class="col col-lg-8">
+<div class=ws-well>
+<div class=ws-well-heading>Display Filter Reference: Bluetooth L2CAP Protocol</div>
+<p>
+<strong>Protocol field name:</strong> btl2cap
+</p>
+<p>
+<strong>Versions:</strong> 1.0.0 to 1.10.8
+</p>
+<p>
+<a href="../">Back to Display Filter Reference</a>
+</p>
+<table class="table table-condensed table-greenbar">
+<tr>
+<th>Field name</th>
+<th>Description</th>
+<th>Type</th>
+<th>Versions</th>
+</tr>
+<tr>
+<td>btl2cap.cid</td>
+<td>CID</td>
+<td>Unsigned integer, 2 bytes</td>
+<td>1.0.0 to 1.10.8</td>
+</tr>
+<tr>
+<td>btl2cap.cmd_code</td>
+<td>Command Code</td>
+<td>Unsigned integer, 1 byte</td>
+<td>1.0.0 to 1.10.8</td>
+</tr>
+<tr>
+<td>btl2cap.cmd_data</td>
+<td>Command Data</td>
+<td>Label</td>
+<td>1.0.0 to 1.10.8</td>
+</tr>
+<tr>
+<td>btl2cap.cmd_ident</td>
+<td>Command Identifier</td>
+<td>Unsigned integer, 1 byte</td>
+<td>1.0.0 to 1.10.8</td>
+</tr>
+<tr>
+<td>btl2cap.cmd_length</td>
+<td>Command Length</td>
+<td>Unsigned integer, 1 byte</td>
+<td>1.0.0 to 1.10.8</td>
+</tr>
+<tr>
+<td>btl2cap.command</td>
+<td>Command</td>
+<td>Label</td>
+<td>1.0.0 to 1.10.8</td>
+</tr>
+<tr>
+<td>btl2cap.conf_param_option</td>
+<td>Configuration Parameter Option</td>
+<td>Label</td>
+<td>1.0.0 to 1.10.8</td>
+</tr>
+<tr>
+<td>btl2cap.conf_result</td>
+<td>Result</td>
+<td>Unsigned integer, 2 bytes</td>
+<td>1.0.0 to 1.10.8</td>
+</tr>
+<tr>
+<td>btl2cap.continuation</td>
+<td>Continuation Flag</td>
+<td>Boolean</td>
+<td>1.0.0 to 1.10.8</td>
+</tr>
+<tr>
+<td>btl2cap.continuation_to</td>
+<td>This is a continuation to the SDU in frame</td>
+<td>Frame number</td>
+<td>1.2.0 to 1.10.8</td>
+</tr>
+<tr>
+<td>btl2cap.control</td>
+<td>Control field</td>
+<td>Label</td>
+<td>1.2.0 to 1.10.8</td>
+</tr>
+<tr>
+<td>btl2cap.control_reqseq</td>
+<td>ReqSeq</td>
+<td>Unsigned integer, 2 bytes</td>
+<td>1.2.0 to 1.10.8</td>
+</tr>
+<tr>
+<td>btl2cap.control_retransmissiondisable</td>
+<td>R</td>
+<td>Unsigned integer, 2 bytes</td>
+<td>1.2.0 to 1.10.8</td>
+</tr>
+<tr>
+<td>btl2cap.control_sar</td>
+<td>Segmentation and reassembly</td>
+<td>Unsigned integer, 2 bytes</td>
+<td>1.2.0 to 1.10.8</td>
+</tr>
+<tr>
+<td>btl2cap.control_supervisory</td>
+<td>S</td>
+<td>Unsigned integer, 2 bytes</td>
+<td>1.2.0 to 1.10.8</td>
+</tr>
+<tr>
+<td>btl2cap.control_txseq</td>
+<td>TxSeq</td>
+<td>Unsigned integer, 2 bytes</td>
+<td>1.2.0 to 1.10.8</td>
+</tr>
+<tr>
+<td>btl2cap.control_type</td>
+<td>Frame Type</td>
+<td>Unsigned integer, 2 bytes</td>
+<td>1.2.0 to 1.10.8</td>
+</tr>
+<tr>
+<td>btl2cap.ctrl_id</td>
+<td>Controller ID</td>
+<td>Unsigned integer, 1 byte</td>
+<td>1.4.0 to 1.10.8</td>
+</tr>
+<tr>
+<td>btl2cap.dcid</td>
+<td>Destination CID</td>
+<td>Unsigned integer, 2 bytes</td>
+<td>1.0.0 to 1.10.8</td>
+</tr>
+<tr>
+<td>btl2cap.dctrl_id</td>
+<td>Controller ID</td>
+<td>Unsigned integer, 1 byte</td>
+<td>1.4.0 to 1.10.8</td>
+</tr>
+<tr>
+<td>btl2cap.fcs</td>
+<td>FCS</td>
+<td>Unsigned integer, 2 bytes</td>
+<td>1.2.0 to 1.10.8</td>
+</tr>
+<tr>
+<td>btl2cap.icid</td>
+<td>Initiator CID</td>
+<td>Unsigned integer, 2 bytes</td>
+<td>1.4.0 to 1.10.8</td>
+</tr>
+<tr>
+<td>btl2cap.info_bidirqos</td>
+<td>Bi-Directional QOS</td>
+<td>Unsigned integer, 4 bytes</td>
+<td>1.0.0 to 1.10.8</td>
+</tr>
+<tr>
+<td>btl2cap.info_enh_retransmission</td>
+<td>Enhanced Retransmission Mode</td>
+<td>Unsigned integer, 4 bytes</td>
+<td>1.4.0 to 1.10.8</td>
+</tr>
+<tr>
+<td>btl2cap.info_extfeatures</td>
+<td>Extended Features</td>
+<td>Label</td>
+<td>1.2.0 to 1.10.8</td>
+</tr>
+<tr>
+<td>btl2cap.info_fcs</td>
+<td>FCS</td>
+<td>Unsigned integer, 4 bytes</td>
+<td>1.4.0 to 1.10.8</td>
+</tr>
+<tr>
+<td>btl2cap.info_fixedchan</td>
+<td>Fixed Channels</td>
+<td>Unsigned integer, 4 bytes</td>
+<td>1.4.0 to 1.10.8</td>
+</tr>
+<tr>
+<td>btl2cap.info_fixedchans</td>
+<td>Fixed Channels</td>
+<td>Label</td>
+<td>1.4.0 to 1.10.8</td>
+</tr>
+<tr>
+<td>btl2cap.info_fixedchans_amp_man</td>
+<td>AMP Manager protocol</td>
+<td>Unsigned integer, 4 bytes</td>
+<td>1.4.0 to 1.10.8</td>
+</tr>
+<tr>
+<td>btl2cap.info_fixedchans_amp_test</td>
+<td>AMP Test Manager</td>
+<td>Unsigned integer, 4 bytes</td>
+<td>1.4.0 to 1.10.8</td>
+</tr>
+<tr>
+<td>btl2cap.info_fixedchans_connless</td>
+<td>Connectionless reception</td>
+<td>Unsigned integer, 4 bytes</td>
+<td>1.4.0 to 1.10.8</td>
+</tr>
+<tr>
+<td>btl2cap.info_fixedchans_null</td>
+<td>Null identifier</td>
+<td>Unsigned integer, 4 bytes</td>
+<td>1.4.0 to 1.10.8</td>
+</tr>
+<tr>
+<td>btl2cap.info_fixedchans_signal</td>
+<td>L2CAP signaling channel</td>
+<td>Unsigned integer, 4 bytes</td>
+<td>1.4.0 to 1.10.8</td>
+</tr>
+<tr>
+<td>btl2cap.info_flow_spec</td>
+<td>Extended Flow Specification for BR/EDR</td>
+<td>Unsigned integer, 4 bytes</td>
+<td>1.4.0 to 1.10.8</td>
+</tr>
+<tr>
+<td>btl2cap.info_flowcontrol</td>
+<td>Flow Control Mode</td>
+<td>Unsigned integer, 4 bytes</td>
+<td>1.0.0 to 1.10.8</td>
+</tr>
+<tr>
+<td>btl2cap.info_mtu</td>
+<td>Remote Entity MTU</td>
+<td>Unsigned integer, 2 bytes</td>
+<td>1.0.0 to 1.10.8</td>
+</tr>
+<tr>
+<td>btl2cap.info_result</td>
+<td>Result</td>
+<td>Unsigned integer, 2 bytes</td>
+<td>1.0.0 to 1.10.8</td>
+</tr>
+<tr>
+<td>btl2cap.info_retransmission</td>
+<td>Retransmission Mode</td>
+<td>Unsigned integer, 4 bytes</td>
+<td>1.0.0 to 1.10.8</td>
+</tr>
+<tr>
+<td>btl2cap.info_streaming</td>
+<td>Streaming Mode</td>
+<td>Unsigned integer, 4 bytes</td>
+<td>1.4.0 to 1.10.8</td>
+</tr>
+<tr>
+<td>btl2cap.info_type</td>
+<td>Information Type</td>
+<td>Unsigned integer, 2 bytes</td>
+<td>1.0.0 to 1.10.8</td>
+</tr>
+<tr>
+<td>btl2cap.info_unicast</td>
+<td>Unicast Connectionless Data Reception</td>
+<td>Unsigned integer, 4 bytes</td>
+<td>1.4.0 to 1.10.8</td>
+</tr>
+<tr>
+<td>btl2cap.info_window</td>
+<td>Extended Window Size</td>
+<td>Unsigned integer, 4 bytes</td>
+<td>1.4.0 to 1.10.8</td>
+</tr>
+<tr>
+<td>btl2cap.length</td>
+<td>Length</td>
+<td>Unsigned integer, 2 bytes</td>
+<td>1.0.0 to 1.10.8</td>
+</tr>
+<tr>
+<td>btl2cap.max_interval</td>
+<td>Max. Interval</td>
+<td>Unsigned integer, 2 bytes</td>
+<td>1.10.0 to 1.10.8</td>
+</tr>
+<tr>
+<td>btl2cap.maxtransmit</td>
+<td>MaxTransmit</td>
+<td>Unsigned integer, 1 byte</td>
+<td>1.0.0 to 1.10.8</td>
+</tr>
+<tr>
+<td>btl2cap.min_interval</td>
+<td>Min. Interval</td>
+<td>Unsigned integer, 2 bytes</td>
+<td>1.10.0 to 1.10.8</td>
+</tr>
+<tr>
+<td>btl2cap.monitortimeout</td>
+<td>Monitor Timeout (ms)</td>
+<td>Unsigned integer, 2 bytes</td>
+<td>1.0.0 to 1.10.8</td>
+</tr>
+<tr>
+<td>btl2cap.move_result</td>
+<td>Move Result</td>
+<td>Unsigned integer, 2 bytes</td>
+<td>1.4.0 to 1.10.8</td>
+</tr>
+<tr>
+<td>btl2cap.mps</td>
+<td>MPS</td>
+<td>Unsigned integer, 2 bytes</td>
+<td>1.0.0 to 1.10.8</td>
+</tr>
+<tr>
+<td>btl2cap.option_access_latency</td>
+<td>Access Latency (us)</td>
+<td>Unsigned integer, 4 bytes</td>
+<td>1.4.0 to 1.10.8</td>
+</tr>
+<tr>
+<td>btl2cap.option_dealyvar</td>
+<td>Delay Variation (microseconds)</td>
+<td>Unsigned integer, 4 bytes</td>
+<td>1.0.0 to 1.0.16</td>
+</tr>
+<tr>
+<td>btl2cap.option_delayvar</td>
+<td>Delay Variation (microseconds)</td>
+<td>Unsigned integer, 4 bytes</td>
+<td>1.2.0 to 1.10.8</td>
+</tr>
+<tr>
+<td>btl2cap.option_fcs</td>
+<td>FCS</td>
+<td>Unsigned integer, 2 bytes</td>
+<td>1.4.0 to 1.10.8</td>
+</tr>
+<tr>
+<td>btl2cap.option_flags</td>
+<td>Flags</td>
+<td>Unsigned integer, 1 byte</td>
+<td>1.0.0 to 1.10.8</td>
+</tr>
+<tr>
+<td>btl2cap.option_flushto</td>
+<td>Flush Timeout (ms)</td>
+<td>Unsigned integer, 2 bytes</td>
+<td>1.0.0 to 1.10.8</td>
+</tr>
+<tr>
+<td>btl2cap.option_ident</td>
+<td>Identifier</td>
+<td>Unsigned integer, 1 byte</td>
+<td>1.4.0 to 1.10.8</td>
+</tr>
+<tr>
+<td>btl2cap.option_latency</td>
+<td>Latency (microseconds)</td>
+<td>Unsigned integer, 4 bytes</td>
+<td>1.0.0 to 1.10.8</td>
+</tr>
+<tr>
+<td>btl2cap.option_length</td>
+<td>Length</td>
+<td>Unsigned integer, 1 byte</td>
+<td>1.0.0 to 1.10.8</td>
+</tr>
+<tr>
+<td>btl2cap.option_mtu</td>
+<td>MTU</td>
+<td>Unsigned integer, 2 bytes</td>
+<td>1.0.0 to 1.10.8</td>
+</tr>
+<tr>
+<td>btl2cap.option_peakbandwidth</td>
+<td>Peak Bandwidth (bytes/s)</td>
+<td>Unsigned integer, 4 bytes</td>
+<td>1.0.0 to 1.10.8</td>
+</tr>
+<tr>
+<td>btl2cap.option_sdu_arrival_time</td>
+<td>SDU Inter-arrival Time (us)</td>
+<td>Unsigned integer, 4 bytes</td>
+<td>1.4.0 to 1.10.8</td>
+</tr>
+<tr>
+<td>btl2cap.option_sdu_size</td>
+<td>Maximum SDU Size</td>
+<td>Unsigned integer, 2 bytes</td>
+<td>1.4.0 to 1.10.8</td>
+</tr>
+<tr>
+<td>btl2cap.option_servicetype</td>
+<td>Service Type</td>
+<td>Unsigned integer, 1 byte</td>
+<td>1.0.0 to 1.10.8</td>
+</tr>
+<tr>
+<td>btl2cap.option_tokenbsize</td>
+<td>Token Bucket Size (bytes)</td>
+<td>Unsigned integer, 4 bytes</td>
+<td>1.0.0 to 1.10.8</td>
+</tr>
+<tr>
+<td>btl2cap.option_tokenrate</td>
+<td>Token Rate (bytes/s)</td>
+<td>Unsigned integer, 4 bytes</td>
+<td>1.0.0 to 1.10.8</td>
+</tr>
+<tr>
+<td>btl2cap.option_type</td>
+<td>Type</td>
+<td>Unsigned integer, 1 byte</td>
+<td>1.0.0 to 1.10.8</td>
+</tr>
+<tr>
+<td>btl2cap.option_window</td>
+<td>Extended Window Size</td>
+<td>Unsigned integer, 2 bytes</td>
+<td>1.4.0 to 1.10.8</td>
+</tr>
+<tr>
+<td>btl2cap.payload</td>
+<td>Payload</td>
+<td>Sequence of bytes</td>
+<td>1.0.0 to 1.10.8</td>
+</tr>
+<tr>
+<td>btl2cap.psm</td>
+<td>PSM</td>
+<td>Unsigned integer, 2 bytes</td>
+<td>1.0.0 to 1.10.8</td>
+</tr>
+<tr>
+<td>btl2cap.reassembled_in</td>
+<td>This SDU is reassembled in frame</td>
+<td>Frame number</td>
+<td>1.2.0 to 1.10.8</td>
+</tr>
+<tr>
+<td>btl2cap.rej_reason</td>
+<td>Reason</td>
+<td>Unsigned integer, 2 bytes</td>
+<td>1.0.0 to 1.2.18, 1.6.0 to 1.10.8</td>
+</tr>
+<tr>
+<td>btl2cap.result</td>
+<td>Result</td>
+<td>Unsigned integer, 2 bytes</td>
+<td>1.0.0 to 1.10.8</td>
+</tr>
+<tr>
+<td>btl2cap.retransmissionmode</td>
+<td>Mode</td>
+<td>Unsigned integer, 1 byte</td>
+<td>1.0.0 to 1.10.8</td>
+</tr>
+<tr>
+<td>btl2cap.retransmittimeout</td>
+<td>Retransmit timeout (ms)</td>
+<td>Unsigned integer, 2 bytes</td>
+<td>1.0.0 to 1.10.8</td>
+</tr>
+<tr>
+<td>btl2cap.scid</td>
+<td>Source CID</td>
+<td>Unsigned integer, 2 bytes</td>
+<td>1.0.0 to 1.10.8</td>
+</tr>
+<tr>
+<td>btl2cap.sdulength</td>
+<td>SDU Length</td>
+<td>Unsigned integer, 2 bytes</td>
+<td>1.2.0 to 1.10.8</td>
+</tr>
+<tr>
+<td>btl2cap.sig_mtu</td>
+<td>Maximum Signalling MTU</td>
+<td>Unsigned integer, 2 bytes</td>
+<td>1.0.0 to 1.10.8</td>
+</tr>
+<tr>
+<td>btl2cap.slave_latency</td>
+<td>Slave Latency</td>
+<td>Unsigned integer, 2 bytes</td>
+<td>1.10.0 to 1.10.8</td>
+</tr>
+<tr>
+<td>btl2cap.status</td>
+<td>Status</td>
+<td>Unsigned integer, 2 bytes</td>
+<td>1.0.0 to 1.10.8</td>
+</tr>
+<tr>
+<td>btl2cap.timeout_multiplier</td>
+<td>Timeout Multiplier</td>
+<td>Unsigned integer, 2 bytes</td>
+<td>1.10.0 to 1.10.8</td>
+</tr>
+<tr>
+<td>btl2cap.txwindow</td>
+<td>TxWindow</td>
+<td>Unsigned integer, 1 byte</td>
+<td>1.0.0 to 1.10.8</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="col col-lg-4">
+<div class=ws-well>
+<div class="ws-well-heading ws-well-heading-enhancement">Enhance Wireshark</div>
+<div class=ws-well-content>
+<p><small>
+<a href="http://www.riverbed.com/products-solutions/products/network-performance-management/">Riverbed</a> is Wireshark's primary
+sponsor and provides our funding.
+<a href="http://www.riverbed.com/products-solutions/products/network-performance-management/">They also make great products.</a>
+</small></p>
+<div class=record>
+<h1><a href="http://www.riverbed.com/contact/Try-Evaluate-Cascade-Shark-Virtual-Edition-30-Day-Trial-Offer.html?CID=70140000000UWCc&LSD=Q412_Cascade_Shark_Virtual_Edition_30_day_Trial_wireshark" title="Troubleshoot your Network">Troubleshoot your Network</a></h1>
+<a class=pull-right href="http://www.riverbed.com/contact/Try-Evaluate-Cascade-Shark-Virtual-Edition-30-Day-Trial-Offer.html?CID=70140000000UWCc&LSD=Q412_Cascade_Shark_Virtual_Edition_30_day_Trial_wireshark"><img src="http://www.wireshark.org/assets/images/100x73xenhancements_trial.png.pagespeed.ic.vc0SJofFBi.png" alt="Free 30 day trial" height=73 width=100 style="margin: 12px 0 0 10px;" pagespeed_url_hash=3366681910></a>
+<h3>Free 30 day trial</h3>
+<ul class=item-list>
+<li>Save hours on network and application issue diagnoses</li>
+<li>Monitor physical and virtual environments</li>
+<li>GUI packet capture and analysis</li>
+<li>Fully integrated with Wireshark</li>
+</ul>
+<h2><a href="http://www.riverbed.com/contact/Try-Evaluate-Cascade-Shark-Virtual-Edition-30-Day-Trial-Offer.html?CID=70140000000UWCc&LSD=Q412_Cascade_Shark_Virtual_Edition_30_day_Trial_wireshark">Try Cascade Shark VE &amp; Cascade Pilot Free for 30 Days</a></h2>
+</div>
+<div class=record>
+<h1><a href="http://www.riverbed.com/products-solutions/products/performance-management/wireshark-enhancement-products/Wireless-Traffic-Packet-Capture.html" title="Riverbed Cascade AirPcap">802.11 Packet Capture</a></h1>
+<a class=pull-right href="http://www.riverbed.com/products-solutions/products/performance-management/wireshark-enhancement-products/Wireless-Traffic-Packet-Capture.html"><img src="data:image/jpeg;base64,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" alt="Riverbed AirPcap" style="margin: 12px 0 0 10px;" pagespeed_url_hash=951707049></a>
+<ul class=item-list>
+<li>WLAN packet capture and transmission</li>
+<li>Full 802.11 a/b/g/n support</li>
+<li>View management, control and data frames</li>
+<li>Multi-channel aggregation (with multiple adapters)</li>
+</ul>
+<p><a class="btn btn-mini btn-enhancement" type=button href="http://www.riverbed.com/products-solutions/products/performance-management/wireshark-enhancement-products/Wireless-Traffic-Packet-Capture.html">Learn More <span class=link-arrow></span></a></p>
+<p><a class="btn btn-mini btn-enhancement" type=button href="https://www.cacetech.com/products/catalog/product_info.php?products_id=69">Buy Now <span class=link-arrow></span></a></p>
+</div>
+<div class=record>
+<h1><a href="http://www.riverbed.com/products-solutions/products/performance-management/wireshark-enhancement-products/Personal-Desktop-Network-Analyzer.html" title="Riverbed Cascade Pilot Personal Edition product page">Packet Analysis Made Easy</a></h1>
+<ul class=item-list>
+<a class=pull-right href="http://www.riverbed.com/products-solutions/products/performance-management/wireshark-enhancement-products/Personal-Desktop-Network-Analyzer.html"><img style="margin-left: 8px; border: 1px solid #ccc;" src="http://www.wireshark.org/assets/images/CACE_PILOT_screens.gif.pagespeed.ce.u1Sq2OrOBz.gif" alt="Cascade Pilot Personal Edition graphs" width=80 height=72 pagespeed_url_hash=1970994068></a>
+<li>Visually rich, powerful LAN analyzer</li>
+<li>Quickly access very large pcap files</li>
+<li>Professional, customizable reports</li>
+<li>Advanced triggers and alerts</li>
+<li>Fully integrated with Wireshark</li>
+</ul>
+<p><a class="btn btn-mini btn-enhancement" type=button href="http://www.riverbed.com/contact/Try-Evaluate-Cascade-Pilot-Personal-Edition-10-day-trial-offer.html?CID=70140000000UWCh&LSD=Cascade_Pilot_PE_10_day_trial_wireshark_0208">Try Cascade Pilot PE FREE for 10 days <span class=link-arrow></span></a></p>
+<p><a class="btn btn-mini btn-enhancement" type=button href="https://www.cacetech.com/products/catalog/product_info.php?products_id=57">Buy Now <span class=link-arrow></span></a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<footer>
+<span id=tm-notice>
+Wireshark and the "fin" logo are registered trademarks of the Wireshark Foundation
+</span>
+<span class=pull-right>
+<a onclick="scrollToTop();return false;" href="#"><i class=icon-arrow-up></i></a>
+<a href="#">Back to top</a>
+</span>
+</footer>
+</div>
+<script type="text/javascript">
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-605389-2']);
+_gaq.push(['_trackPageview']);
+
+$(window).load(function() {
+  var ga_src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  $.ajax({ cache: true, dataType: "script", url: ga_src });
+});
+</script>
+<script>
+$(window).load(function(){
+  $.ajax({ cache: true, dataType: "script",
+    url: document.location.protocol + '//www.google.com/cse/brand?form=cse-search-box&amp;lang=en'
+  });
+});
+</script>
+<script pagespeed_no_defer="">//<![CDATA[
+(function(){var e=encodeURIComponent,f=window,h=document,m="width",n="documentElement",p="height",q="length",r="prototype",s="body",t="&",u="&ci=",w="&n=",x="&rd=",y=",",z="?",A="Content-Type",B="Microsoft.XMLHTTP",C="Msxml2.XMLHTTP",D="POST",E="application/x-www-form-urlencoded",F="img",G="input",H="load",I="oh=",J="on",K="pagespeed_url_hash",L="url=",M=function(a,c,d){if(a.addEventListener)a.addEventListener(c,d,!1);else if(a.attachEvent)a.attachEvent(J+c,d);else{var b=a[J+c];a[J+c]=function(){d.call(this);
+b&&b.call(this)}}};f.pagespeed=f.pagespeed||{};var N=f.pagespeed,O=function(a,c,d,b,g){this.d=a;this.f=c;this.g=d;this.a=g;this.c={height:f.innerHeight||h[n].clientHeight||h[s].clientHeight,width:f.innerWidth||h[n].clientWidth||h[s].clientWidth};this.e=b;this.b={}};O[r].j=function(a){a=a.getBoundingClientRect();return{top:a.top+(void 0!==f.pageYOffset?f.pageYOffset:(h[n]||h[s].parentNode||h[s]).scrollTop),left:a.left+(void 0!==f.pageXOffset?f.pageXOffset:(h[n]||h[s].parentNode||h[s]).scrollLeft)}};
+O[r].i=function(a){if(0>=a.offsetWidth&&0>=a.offsetHeight)return!1;a=this.j(a);var c=a.top.toString()+y+a.left.toString();if(this.b.hasOwnProperty(c))return!1;this.b[c]=!0;return a.top<=this.c[p]&&a.left<=this.c[m]};
+O[r].l=function(){for(var a=[F,G],c=[],d={},b=0;b<a[q];++b)for(var g=h.getElementsByTagName(a[b]),k=0;k<g[q];++k){var v=g[k].getAttribute(K);v&&g[k].getBoundingClientRect&&this.i(g[k])&&!(v in d)&&(c.push(v),d[v]=!0)}b=!1;a=I+this.g;this.a&&(a+=w+this.a);if(0!=c[q]){a+=u+e(c[0]);for(b=1;b<c[q];++b){d=y+e(c[b]);if(131072<a[q]+d[q])break;a+=d}b=!0}this.e&&(d=x+e(JSON.stringify(this.h())),131072>=a[q]+d[q]&&(a+=d),b=!0);N.criticalImagesBeaconData=a;if(b){var c=this.d,b=this.f,l;if(f.XMLHttpRequest)l=
+new XMLHttpRequest;else if(f.ActiveXObject)try{l=new ActiveXObject(C)}catch(P){try{l=new ActiveXObject(B)}catch(Q){}}l&&(l.open(D,c+(-1==c.indexOf(z)?z:t)+L+e(b)),l.setRequestHeader(A,E),l.send(a))}};
+O[r].h=function(){for(var a={},c=h.getElementsByTagName(F),d=0;d<c[q];++d){var b=c[d],g=b.getAttribute(K);if("undefined"==typeof b.naturalWidth||"undefined"==typeof b.naturalHeight||"undefined"==typeof g)break;if("undefined"==typeof a[b.src]&&0<b[m]&&0<b[p]&&0<b.naturalWidth&&0<b.naturalHeight||"undefined"!=typeof a[b.src]&&b[m]>=a[b.src].n&&b[p]>=a[b.src].m)a[g]={renderedWidth:b[m],renderedHeight:b[p],originalWidth:b.naturalWidth,originalHeight:b.naturalHeight}}return a};
+N.k=function(a,c,d,b,g){var k=new O(a,c,d,b,g);M(f,H,function(){f.setTimeout(function(){k.l()},0)})};N.criticalImagesBeaconInit=N.k;})();
+
+pagespeed.criticalImagesBeaconInit('/mod_pagespeed_beacon','http://www.wireshark.org/docs/dfref/b/btl2cap.html','H11ViTlOyj',false,'Ee6b_HHOa1A');
+//]]></script></body>
+</html>

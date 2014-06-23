@@ -27,6 +27,9 @@ bluez:
 http://www.kernel.org/pub/linux/bluetooth/bluez-5.19.tar.xz
 https://www.kernel.org/pub/linux/network/ofono/ofono-1.14.tar.xz
 https://www.kernel.org/pub/linux/network/ofono/phonesim-1.19.tar.xz
+affix:
+http://affix.sourceforge.net/affix-3.2.0.tar.gz
+http://affix.sourceforge.net/affix-kernel-3.2.0.tar.gz
 5. Books
 C++:
 http://download.csdn.net/download/xiaoting451292510/5087643
