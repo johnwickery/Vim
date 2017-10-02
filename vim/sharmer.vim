@@ -99,12 +99,13 @@ set fileencoding=utf-8
 set termencoding=utf-8
 
 " backup setting
+set noundofile
 set nobackup
 
 " Color scheme settings
 syntax enable
-set background=dark
-colorscheme solarized
+" set background=dark
+" colorscheme solarized
 
 "
 "
